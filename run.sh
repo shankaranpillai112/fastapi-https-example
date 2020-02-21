@@ -1,2 +1,2 @@
 cd certificates && bash gen-cert.sh
-uvicorn src.api:app --ssl-keyfile="certificates/example.com+4-key.pem" --ssl-certfile="certificates/example.com+4.pem"
+cd ../ && uvicorn src.api:app --host 0.0.0.0 --port 5000 --ssl-keyfile="certificates/key.pem" --ssl-certfile="certificates/cert.pem"
